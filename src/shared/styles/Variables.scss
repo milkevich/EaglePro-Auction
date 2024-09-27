@@ -1,0 +1,62 @@
+:root {
+    --main-bg-color: #0A0A0A;
+    --main-color: #E0E0E0;
+    --sec-bg-color: #121212;
+    --sec-color: #626262;
+    --border-color: #282828;
+    --btn-bg-color: #191919;
+    --border-radius: 10px;
+
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    overflow-x: hidden;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator { display: none; } 
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+button {
+    transition: ease-in-out all 0.3s;
+    scale: 1;
+}
+
+button:hover {
+    scale: 0.95;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--main-bg-color) inset;
+    -webkit-text-fill-color: var(--main-color);
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px var(--main-bg-color) inset;
+    -webkit-text-fill-color: var(--main-color);
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  
+
+input[type="date"]:focus::before,
+input[type="date"]:not(:placeholder-shown)::before {
+  content: "";
+}
+
+p {
+    font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+  }
