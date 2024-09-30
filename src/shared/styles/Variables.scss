@@ -3,6 +3,7 @@
     --main-color: #E0E0E0;
     --sec-bg-color: #121212;
     --sec-color: #626262;
+    --thr-bg-color: #353535;
     --border-color: #282828;
     --btn-bg-color: #191919;
     --border-radius: 10px;
@@ -10,6 +11,13 @@
     background-color: var(--main-bg-color);
     color: var(--main-color);
     overflow-x: hidden;
+
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+    line-height: 1.5;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator { display: none; } 
@@ -52,11 +60,29 @@ p {
     font-size: 16px;
 }
 
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
     display: none;
 }
 
 body {
     -ms-overflow-style: none; 
     scrollbar-width: none;  
+    margin: 0;
+    padding: 0;
+  }
+
+  .leftLabel {
+    animation: blink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
